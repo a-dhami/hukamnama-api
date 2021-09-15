@@ -7,6 +7,8 @@ An API that extracts the daily "hukamnama", the daily "royal decree" that instru
 The hukamnama usually consists of various teachings of the Sikh Gurus, that Sikh disciples should incorporate into their daily lives.
 The API extracts the official hukamnama of the day from the SGPC website.
 
+The API is made available for use at: https://app.akashdhami.com/hukamnama.js
+
 ## Usage
 - hukamnama.js (This provides the latest hukamnama)
 - hukamnama.js?date=<day>&month=<month>&year=<year>  
@@ -21,7 +23,7 @@ The following information is made available through a API request.
 - English Description of the Hukamnama               (windows-1252->utf-8 encoding)
 - Hukamnama in Unicode Gurmukhi
 - Punjabi Description of the Hukamnama in Unicode
-
+  
 ## Why?
 
 This API was primarily created as I was unable to find one that existed. A few APIs do exist that pull data from SikhNet or other sources, but I was unable to find APIs that pulled the daily hukamnama straight from the source.
