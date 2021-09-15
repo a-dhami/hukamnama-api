@@ -16,9 +16,9 @@ Note: Hukamnamas are released daily at 5:00AM IST (Indian Standard Time). (UTC +
   
   
 The following information is made available through a API request.
-- Hukamnama in its Original Form              (windows-1252->utf-8 encoding and requires use of a Gurmukhi Font)
-- Punjabi Description of the Hukamnama        (windows-1252->utf-8 encoding and requires use of a Gurmukhi Font)
-- English Description of the Hukamnama        (windows-1252->utf-8 encoding)
+- Hukamnama in its Original Form (ASCII)             (windows-1252->utf-8 encoding and requires use of a Gurmukhi Font)
+- Punjabi Description of the Hukamnama (ASCII)       (windows-1252->utf-8 encoding and requires use of a Gurmukhi Font)
+- English Description of the Hukamnama               (windows-1252->utf-8 encoding)
 - Hukamnama in Unicode Gurmukhi
 - Punjabi Description of the Hukamnama in Unicode
 
@@ -38,6 +38,11 @@ Although it is available in HTML format, it is presented using windows-1252 enco
 This makes it difficult for developers to make use of it in applications freely as there is no API that obtains data straight from the source.
 As a result, this API allows developers to obtain the daily hukamnama straight from the SGPC website, and provides a Unicode encoded format of the hukamnama that can be easily used. 
 
-Developers can also access previous daily hukamnamas using the API as well, provided they are still stored on the SGPC website. 
-
-
+Developers can also access previous daily hukamnamas using the API as well, provided they are still stored on the SGPC website.
+  
+This is accomplished by using:
+- Express
+- Got: to obtain and scrape the raw HTML content from the SGPC website
+- Cheerio: for analyzing the scraped HTML content from the SGPC website
+- IconV-Lite: to convert from windows-1252 to utf-8 properly without losing characters in the progress
+- Anvaad: to convert the hukamnama from its original ASCII Gurmukhi Format to Unicode
