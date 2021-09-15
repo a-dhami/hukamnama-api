@@ -30,6 +30,7 @@ app.get('/hukamnama.js', function(req, res){
   console.log("month:", month, " date: ", date, " year:", year);
 
   got.post('https://old.sgpc.net/hukumnama/oldhukumnama.asp', {
+    responseType: 'buffer',
     form: {
       month: month,
       date: date,
@@ -43,11 +44,11 @@ app.get('/hukamnama.js', function(req, res){
        return $(this).text();
      }).get();
 
-     var hukamnamaOrig = data[0];
-     var hukamnamaUni = anvaad.unicode(data[0]);
-     var punjabiTranslationOrig = data[1];
-     var punjabiTranslationUni = anvaad.unicode(data[1]);
-     var englishTranslation = data[2];
+     var hukamnamaOrig = data[0].replace(/\n/g, '');
+     var hukamnamaUni = anvaad.unicode(hukamnamaOrig);
+     var punjabiTranslationOrig = data[1].replace(/\n/g,'');
+     var punjabiTranslationUni = anvaad.unicode(punjabiTranslationOrig);
+     var englishTranslation = data[2].replace(/\n/g,'');
 
      var json = {
        hukamnamaOrig: hukamnamaOrig,
@@ -58,7 +59,7 @@ app.get('/hukamnama.js', function(req, res){
       };
 
 
-      res.send(json);
+    res.send(json);
 
  }).catch(err => {
      console.log(err);
