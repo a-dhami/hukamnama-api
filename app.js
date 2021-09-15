@@ -110,5 +110,5 @@ app.get('/hukamnama.js', function(req, res){
 });
 
 app.listen('3000');
-console.log('Hukamnama-API is running on http://localhost:80');
+console.log('Hukamnama-API is running');
 module.exports = app;
