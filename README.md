@@ -7,7 +7,7 @@ An API that extracts the daily "hukamnama", the daily "royal decree" that instru
 The hukamnama usually consists of various teachings of the Sikh Gurus, that Sikh disciples should incorporate into their daily lives.
 The API extracts the official hukamnama of the day from the SGPC website.
 
-The API is made available for use at: https://app.akashdhami.com/hukamnama.js
+The API is made available for use at: https://app.akashdhami.com/hukamnama/
 
 ## Usage
 - hukamnama.js (This provides the latest hukamnama)
